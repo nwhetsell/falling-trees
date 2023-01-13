@@ -21,6 +21,6 @@ jobs:
     - name: Archive
       uses: actions/upload-artifact@main
       with:
-      name: falling-trees
-      path: falling-trees.pdf
-      if-no-files-found: error
+        name: falling-trees
+        path: falling-trees.pdf
+        if-no-files-found: error
