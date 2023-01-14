@@ -207,7 +207,7 @@
       \tempo 4=78
       s4 \tuplet 3/2 { ds8 a4~ } 4 c16 e c, \ottava #0 \change Staff="down" e,, \change Staff="up" |
       \tempo "a tempo" 4=104
-      r16 e'16( gs fs ds' fs8) a,16( cs e a gs ds8) cs16 e |
+      r16 e'16( gs fs ds' fs8) a,16( cs e a gs ds) \change Staff="down" e,, \change Staff="up" cs'' e |
       \time 3/4 fs4 \subdivide-beams #1/8 2 { \tuplet 3/2 { \change Staff="down" ds,16 \change Staff="up" ds' gs } a \change Staff="down" e, } fs \change Staff="up" fs' a, gs' |
       \time 4/4
       \tempo \markup { \normal-text { \italic "rit." } }
@@ -543,7 +543,7 @@
 
       % G
       \tuplet 3/2 { \change Staff="up" e'8 b \change Staff="down" e,,16 e'~ } 4 ds,16 e cs' ds s4 |
-      ds,8 cs~8 gs~8 cs~16 e,8. |
+      ds,8 cs~8 gs~8 cs s4 |
       a4 s2 |
       \clef "bass" e4. a8 s2 |
       <d, fs,>4-> <cs e,>-> <d a d,>2-> |
