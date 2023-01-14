@@ -478,7 +478,7 @@
       df4 e fs |
       s2. |
       df4 \stemNeutral <c e,>16 \change Staff="up" bf' a \change Staff="down" df, \once \override TupletNumber.stencil = ##f \tuplet 6/4 { s8 \crossStaff { \stemDown \once \override Stem.length = #0 fs16 \stemNeutral } s8. } |
-      \clef "bass" s4 \once \override TupletNumber.stencil = ##f \tuplet 6/4 { s8. s8 \crossStaff { \once \override Stem.length = #0 df,16 } } c4 s |
+      \clef "bass" s2 c,4 s |
       \key e \major
       \stemDown fs,4 \stemNeutral s \mergeDifferentlyDottedOn c'8. \mergeDifferentlyDottedOff cs'16 \stemDown c,4 \stemNeutral |
       \clef "treble" s4 s a'2 |
