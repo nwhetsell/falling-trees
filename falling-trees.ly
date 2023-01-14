@@ -31,7 +31,7 @@
       \time 3/4 \tuplet 6/4 { ef,16 fs' bf, ef, df' ef~ } \subdivide-beams #1/8 2 { \tuplet 3/2 8 { 16 g, df'~16 e8 } } <e e,>~ \tuplet 3/2 { 16 <ef gf,>8 } |
       \time 2/4 <df bf>4-> \ottava #0 ef,16 bf' ef,32( e g a) |
       \time 3/4 <bf bf,>4-^ ef, \acciaccatura g16 ef8 a |
-      \time 4/4 g16 ef \change Staff="down" g,,8 \change Staff="up" c'16 bf df \change Staff="down" e, \change Staff="up" r8 df' \change Staff="down" e,,[ \change Staff="up" c''] |
+      \time 4/4 g16 ef \change Staff="down" g,,8 \change Staff="up" c'16 bf df \change Staff="down" e, \change Staff="up" \once \override TupletNumber.stencil = ##f \tuplet 6/4 { s8. \crossStaff { df'16 } s8 } \change Staff="down" e,,8[ \change Staff="up" c''] |
       bf8. g16 g4 a2 |
       R1
       r2 r4 \ottava #1 g''4 |
