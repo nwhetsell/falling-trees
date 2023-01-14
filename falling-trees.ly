@@ -28,7 +28,7 @@
       \time 4/4
       \ottava #1 c''''8( \tuplet 3/2 { df16 bf df } ef8.) \subdivide-beams #1/8 2 { bf16 16( g \tuplet 3/2 { e' a, g } } e'8.) df,16 |
       \tuplet 6/4 4 { df'16 bf fs c ef a, df fs g ef g a bf, df g bf, df fs bf, e bf g a ef' } |
-      \time 3/4 \tuplet 6/4 { \change Staff="down" ef,16 \change Staff="up" fs' bf, \change Staff="down" ef, \change Staff="up" df' ef } \tuplet 3/2 4 { \change Staff="down" df, \change Staff="up" g df'8 e <e e,>4 <ef gf,>8 } |
+      \time 3/4 \tuplet 6/4 { ef,16 fs' bf, ef, df' ef } \tuplet 3/2 4 { \change Staff="down" df, \change Staff="up" g df'8 e <e e,>4 <ef gf,>8 } |
       \time 2/4 <df bf>4-> \ottava #0 ef,16 bf' ef,32( e g a) |
       \time 3/4 <bf bf,>4-^ ef, \acciaccatura g16 ef8 a |
       \time 4/4 g16 ef16 \change Staff="down" g,,8 \change Staff="up" c'16 bf df \change Staff="down" e, \change Staff="up" r8 \stemUp \tuplet 3/2 { df'8 g,16 } \stemNeutral \change Staff="down" e,8 \change Staff="up" c'' |
@@ -417,8 +417,8 @@
       \key g \minor
 
       r4 ef'2. |
-      r8df' c4~ \tuplet 3/2 { 8 e, a } e'4 |
-      s4 \stemDown df8 \tuplet 3/2 { <bf gf>16 e, df } \stemNeutral \tuplet 3/2 { e8 <c' e,>16 g bf8 } |
+      r8df' c4~ \tuplet 3/2 { 8 e, a } e'4~ |
+      4 \stemDown df8 \tuplet 3/2 { <bf gf>16 e, df } \stemNeutral \tuplet 3/2 { e8 <c' e,>16 g bf8 } |
       a,8.-> a'16 e4 \clef "bass" \acciaccatura { \bar "" e,,16  } | \bar "|"
       <ef c>2-^ r8 c'' |
       s2 \stemDown \tuplet 6/4 { fs16 e g fs e \change Staff="up" g \change Staff="down" } \stemNeutral s4 |
