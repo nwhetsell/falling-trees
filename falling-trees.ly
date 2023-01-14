@@ -81,7 +81,7 @@
       \tempo "a tempo"
       <e'' e,>4 e \tuplet 3/2 { e8 df ef, } <a df,>16 g c, \change Staff="down" g, \change Staff="up" \ottava #0 ef'' df gf, \change Staff="down" df \change Staff="up" |
       \time 7/8 bf'16 gf' \tuplet 3/2 { ef16 \change Staff="down" e, a, \change Staff="up" } \tuplet 3/2 { \change Staff="down" fs \change Staff="up" gf'' df~ } 8 \tuplet 3/2 { g16 e df } \tuplet 3/2 { bf16 a' e~ } 8~ |
-      \time 3/4 8 g16 c, \change Staff="down" fs, e df \change Staff="up" \clef "bass" g, e \change Staff="down" a, \change Staff="up" \clef "treble" bf'' \change Staff="down" a,,, \change Staff="up" |
+      \time 3/4 8 g16 c,~4 \change Staff="down" e,,16 a, \change Staff="up" bf'' \change Staff="down" a,,, \change Staff="up" |
       \time 3/8 \tuplet 3/2 { g''''8 e ef~ } 8\noBeam |
       \time 3/4
       ef8 g,16 \change Staff="down" g,16 \change Staff="up" \tuplet 3/2 { a'8 g \change Staff="down" ef \change Staff="up" } df'16 c df \change Staff="down" df, \change Staff="up" |
@@ -462,8 +462,8 @@
       s4 \stemDown gf, bf \stemNeutral s2 |
       df,8 c''~16 bf8.~4 s8. \clef "bass" s16 s4 |
       df,,4 s8 s r r bf'16 e, |
-      df,4 \clef "treble" s \clef "bass" s |
-      r8 r c'' |
+      df,4 \clef "treble" fs''16 e df \clef "bass" g, s4 |
+      r8 r c |
       \stemDown c,4 \stemNeutral s2 |
       s2 \clef "treble" s4 |
       s2. df'16 c a bf |
