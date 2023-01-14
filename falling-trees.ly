@@ -574,8 +574,8 @@
       gs,16 e' \change Staff="up" cs' \change Staff="down" b, s2. \clef "bass" \tuplet 6/4 { r16[ ds, e b' b, cs] } |
       a,4 fs''2 4~ \tuplet 3/2 { 4 a8 } |
       \tuplet 3/2 { fs8 cs' a } s2 \clef "treble" fs'16 ds gs b, s4 |
-      s4 \clef "bass" s s8 \clef "treble" s \stemDown fs'8 \tuplet 3/2 { cs cs,16_~ } \stemNeutral |
-      16 gs' b8 gs16 ds'' gs, e~ \tuplet 3/2 { 8 cs' fs, } cs4 |
+      s4 \clef "bass" s s8 \clef "treble" s s4 |
+      cs,16 gs' b8 gs16 ds'' gs, e~ \tuplet 3/2 { 8 cs' fs, } cs4 |
       ds8 \tuplet 3/2 { cs'16 \change Staff="up" gs' fs' \change Staff="down" } \tuplet 3/2 { gs,,8 b16 ds a8 } \stemDown fs4 \stemNeutral ds'16 e8. |
       R1
 
