@@ -1,4 +1,4 @@
-\version "2.24.0"
+\version "2.25.15"
 
 \header {
   title = "Falling Trees"
@@ -101,9 +101,9 @@
       g'16 gf ef \change Staff="down" fs, \change Staff="up" bf' e, bf \change Staff="down" g \change Staff="up" df' \change Staff="down" bf, \change Staff="up" df'' bf |
       \tempo \markup { \normal-text { \italic "poco rit." } }
       \tuplet 3/2 4 { g8 \change Staff="down" fs, df \change Staff="up" df' \change Staff="down" g, e \change Staff="up" df' bf \change Staff="down" a \change Staff="up" } |
-      g'16 df c \change Staff="down" ef, s4 \tuplet 6/4 { bf16 g' \change Staff="up" \crossStaff { ef' } \change Staff="down" bf, \change Staff="up" g'' \change Staff="down" e, \change Staff="up" } |
+      g'16 df c \change Staff="down" ef, s4 \stemUp \tuplet 6/4 { bf16 g' \change Staff="up" ef' \change Staff="down" bf, \change Staff="up" g'' \change Staff="down" e, \change Staff="up" } \stemNeutral |
       \time 4/4
-      \tuplet 6/4 4 { \change Staff="down" g,16 e ef \change Staff="up" e'' ef df \change Staff="down" a,, \change Staff="up" g'' \change Staff="down" bf, df, \change Staff="up" a'' \crossStaff { e } } \tempo 4=96 c4 bf'16 e, df \change Staff="down" a, \change Staff="up" | \bar "||"
+      \tuplet 6/4 4 { \change Staff="down" g,16 e ef \change Staff="up" e'' ef df \change Staff="down" a,, \change Staff="up" g'' \change Staff="down" bf, df, \change Staff="up" a'' e } \tempo 4=96 c4 bf'16 e, df \change Staff="down" a, \change Staff="up" | \bar "||"
       \tempo \markup { \normal-text { \italic "molto rit." } }
       \key e \major
       cs''!16 a fs \change Staff="down" cs \change Staff="up" e' \change Staff="down" cs,! c gs c, \change Staff="up" e' fs c' \tuplet 6/4 { e <ds! a> ds a \change Staff="down" c, a \change Staff="up" } |
@@ -161,7 +161,7 @@
       a16 \change Staff="down" gs, cs a \change Staff="up" e'' ds a \change Staff="down" gs, \change Staff="up" s4 a'16 \change Staff="down" cs, \change Staff="up" gs'' ds |
       \time 3/4 \change Staff="down" a,16 gs \change Staff="up" gs'' a \tuplet 3/2 { a,8 fs' e } s4 |
       \tempo \markup { \normal-text { \italic "rit." } }
-      \time 3/2 \ottava #1 cs'8 \change Staff="down" a, \change Staff="up" a' \change Staff="down" cs, \tuplet 3/2 { e, gs \change Staff="up" b' } e16 a, \crossStaff { cs } ds, \crossStaff { b'16 } \change Staff="down" <e, fs,> \change Staff="up" fs' \change Staff="down" ds, \change Staff="up" gs' e ds \change Staff="down" cs, \change Staff="up" |
+      \time 3/2 \ottava #1 cs'8 \change Staff="down" a, \change Staff="up" a' \change Staff="down" cs, \stemUp \tuplet 3/2 { e, gs \change Staff="up" b' } e16 a, cs ds, b'16 \change Staff="down" <e, fs,> \change Staff="up" fs' \change Staff="down" ds, \change Staff="up" gs' e ds \change Staff="down" cs, \change Staff="up" \stemNeutral |
       \tempo "a tempo" 4=104
       \time 4/4
       \tuplet 7/4 { \change Staff="down" a,16 \change Staff="up" gs''' \change Staff="down" a,, gs \change Staff="up" ds'' a' \change Staff="down" cs,, } %{\once \override TupletBracket.positions = #'(-4 . -4)%} \tuplet 3/2 4 { fs,8 \change Staff="up" a' \change Staff="down" \stemUp ds,~8 \stemNeutral \change Staff="up" a'4 \tupletNeutral gs'8 gs, \change Staff="down" e \change Staff="up" } |
@@ -477,7 +477,7 @@
       \stemDown c,4 s df s |
       df4 e fs |
       s2. |
-      df4 \stemNeutral <c e,>16 \change Staff="up" bf' a \change Staff="down" df, \once \override TupletNumber.stencil = ##f \tuplet 6/4 { s8 \crossStaff { \stemDown \once \override Stem.length = #0 fs16 \stemNeutral } s8. } |
+      df4 \stemNeutral <c e,>16 \change Staff="up" bf' a \change Staff="down" df, \once \override TupletNumber.stencil = ##f \tuplet 6/4 { s8 \crossStaff { fs16 } s8. } |
       \clef "bass" s2 c,4 s |
       \key e \major
       \stemDown fs,4 \stemNeutral s \mergeDifferentlyDottedOn c'8. \mergeDifferentlyDottedOff cs'16 \stemDown c,4 \stemNeutral |
@@ -512,7 +512,7 @@
       \clef "bass" s2. a,,,4 |
       \clef "treble" s2 ds''8 cs' s4 |
       s4 s \tuplet 3/2 { \change Staff="up" gs'8 \change Staff="down" gs, ds } |
-      s2. s8 \crossStaff { \stemDown \once \override Stem.length = #0 cs \stemNeutral } \crossStaff { \stemDown \once \override Stem.length = #0 a'16 \stemNeutral } s8. s4 |
+      s2. s8 \crossStaff { cs } \crossStaff { a'16 } s8. s4 |
       s1 |
       <<
         { ds2 s2 }
