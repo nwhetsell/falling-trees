@@ -18,7 +18,7 @@
       \time 4/4
       \ottava #1 c''''8(^"With lots of pedal" \tuplet 3/2 { df16 bf df } ef8.) \set subdivideBeams = ##t bf16 16( g \tuplet 3/2 { e' a, g } \unset subdivideBeams e'8.) df,16 |
       \tuplet 6/4 4 { df'16 bf fs c ef a, df fs g ef g a bf, df g bf, df fs bf, e bf g a ef' } |
-      \time 3/4 \tuplet 6/4 { ef,16 fs' bf, ef, df' ef~ } \set subdivideBeams = ##t \tuplet 3/2 8 { 16 g, df'~16 e8 } \unset subdivideBeams <e e,>~ \tuplet 3/2 { 16 <ef gf,>8 } |
+      \time 3/4 \tuplet 6/4 { ef,16 fs' bf, ef, df' ef } \stemDown \tuplet 6/4 { \crossStaff { ef16 } s16*3 \crossStaff { e16 } s } \tuplet 3/2 { \crossStaff { <e e,>8 } s \crossStaff { <ef gf,> } } \stemNeutral |
       \time 2/4 <df bf>4-> \ottava #0 \set subdivideBeams = ##t ef,16 bf' ef,32( e g a) \unset subdivideBeams |
       \time 3/4 <bf bf,>4-^ ef, \acciaccatura g8 ef8 a |
       \time 4/4 g16 ef \change Staff="down" g,,8 \change Staff="up" c'16 bf df \change Staff="down" e, \change Staff="up" \once \override TupletNumber.stencil = ##f \tuplet 6/4 { s8. \crossStaff { df'16 } s8 } \change Staff="down" e,,8[ \change Staff="up" c''] |
@@ -407,8 +407,8 @@
       \key g \minor
 
       r4 ef'2. |
-      r8df' c4~ \tuplet 3/2 { 8 e, a } e'4~ |
-      4 df8 \tuplet 3/2 8 { <bf gf>16 e, df \set subdivideBeams = ##t e8 <c' e,>16 g bf8 \unset subdivideBeams } |
+      r8 df' c4~ \tuplet 3/2 { 8 e, a } e'4\laissezVibrer |
+      s4 \stemDown \tuplet 6/4 { df16 \change Staff="up" g df' \change Staff="down" <bf, gf> e,16 df } \tuplet 3/2 { e8 <c' e,>16 g  bf8 \stemNeutral } |
       a,8.-> a'16 e4 \clef "bass" \acciaccatura { \bar "" e,,8 } | \bar "|"
       <ef c>2-^ r8 c'' |
       s2 \stemDown \tuplet 6/4 { fs16 e g fs e \change Staff="up" g \change Staff="down" } \stemNeutral s4 |
