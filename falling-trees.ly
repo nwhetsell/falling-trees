@@ -16,7 +16,7 @@
 
       \tempo 4=112
       \time 4/4
-      \ottava #1 c''''8( \tuplet 3/2 { df16 bf df } ef8.) \set subdivideBeams = ##t bf16 16( g \tuplet 3/2 { e' a, g } \unset subdivideBeams e'8.) df,16 |
+      \ottava #1 c''''8(^"With lots of pedal" \tuplet 3/2 { df16 bf df } ef8.) \set subdivideBeams = ##t bf16 16( g \tuplet 3/2 { e' a, g } \unset subdivideBeams e'8.) df,16 |
       \tuplet 6/4 4 { df'16 bf fs c ef a, df fs g ef g a bf, df g bf, df fs bf, e bf g a ef' } |
       \time 3/4 \tuplet 6/4 { ef,16 fs' bf, ef, df' ef~ } \set subdivideBeams = ##t \tuplet 3/2 8 { 16 g, df'~16 e8 } \unset subdivideBeams <e e,>~ \tuplet 3/2 { 16 <ef gf,>8 } |
       \time 2/4 <df bf>4-> \ottava #0 ef,16 bf' ef,32( e g a) |
