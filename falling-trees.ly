@@ -1,4 +1,4 @@
-\version "2.25.15"
+\version "2.25.23"
 
 \header {
   title = "Falling Trees"
@@ -7,28 +7,18 @@
 
 \language "english"
 
-#(define subdivide-beams (define-music-function (baseMoment beatStructure music) (rational? list? ly:music?)
-#{
-  \set subdivideBeams = ##t
-  \set baseMoment = #(ly:make-moment baseMoment)
-  \set beatStructure = #beatStructure
-  #music
-  \unset beatStructure
-  \unset baseMoment
-  \unset subdivideBeams
-#}))
-
 \score {
   \new PianoStaff <<
     \new Staff="up" \relative {
+      \set beamMinimumSubdivision = #1/8
       \accidentalStyle piano
       \key g \minor
 
       \tempo 4=112
       \time 4/4
-      \ottava #1 c''''8( \tuplet 3/2 { df16 bf df } ef8.) \subdivide-beams #1/8 2 { bf16 16( g \tuplet 3/2 { e' a, g } } e'8.) df,16 |
+      \ottava #1 c''''8( \tuplet 3/2 { df16 bf df } ef8.) \set subdivideBeams = ##t bf16 16( g \tuplet 3/2 { e' a, g } \unset subdivideBeams e'8.) df,16 |
       \tuplet 6/4 4 { df'16 bf fs c ef a, df fs g ef g a bf, df g bf, df fs bf, e bf g a ef' } |
-      \time 3/4 \tuplet 6/4 { ef,16 fs' bf, ef, df' ef~ } \subdivide-beams #1/8 2 { \tuplet 3/2 8 { 16 g, df'~16 e8 } } <e e,>~ \tuplet 3/2 { 16 <ef gf,>8 } |
+      \time 3/4 \tuplet 6/4 { ef,16 fs' bf, ef, df' ef~ } \set subdivideBeams = ##t \tuplet 3/2 8 { 16 g, df'~16 e8 } \unset subdivideBeams <e e,>~ \tuplet 3/2 { 16 <ef gf,>8 } |
       \time 2/4 <df bf>4-> \ottava #0 ef,16 bf' ef,32( e g a) |
       \time 3/4 <bf bf,>4-^ ef, \acciaccatura g16 ef8 a |
       \time 4/4 g16 ef \change Staff="down" g,,8 \change Staff="up" c'16 bf df \change Staff="down" e, \change Staff="up" \once \override TupletNumber.stencil = ##f \tuplet 6/4 { s8. \crossStaff { df'16 } s8 } \change Staff="down" e,,8[ \change Staff="up" c''] |
@@ -208,7 +198,7 @@
       s4 \tuplet 3/2 { ds8 a4~ } 4 c16 e c, \ottava #0 \change Staff="down" e,, \change Staff="up" |
       \tempo "a tempo" 4=104
       r16 e'16( gs fs ds' fs8) a,16( cs e a gs ds) \change Staff="down" e,, \change Staff="up" cs'' e |
-      \time 3/4 fs4 \subdivide-beams #1/8 2 { \tuplet 3/2 { \change Staff="down" ds,16 \change Staff="up" ds' gs } a \change Staff="down" e, } fs \change Staff="up" fs' a, gs' |
+      \time 3/4 fs4 \set subdivideBeams = ##t \tuplet 3/2 { \change Staff="down" ds,16 \change Staff="up" ds' gs } a \change Staff="down" e, \unset subdivideBeams fs \change Staff="up" fs' a, gs' |
       \time 4/4
       \tempo \markup { \normal-text { \italic "rit." } }
       r16 e,( gs fs cs' e8) gs,16 \change Staff="down" fs, cs' \change Staff="up" a' fs'-> \change Staff="down" cs,, a' \change Staff="up" e'16 d'->~ |
@@ -228,7 +218,7 @@
       \tempo \markup { \normal-text { \italic "accel." } }
       \time 6/4 b,16 e'8 \change Staff="down" b,,16 \change Staff="up" cs'' gs a cs, \change Staff="down" gs,16 ds' \change Staff="up" fs' gs \change Staff="down" cs,, \change Staff="up" e' a cs \change Staff="down" a,, gs' a \change Staff="up" b' ds, \change Staff="down" cs, ds e \change Staff="up" |
       \tempo "a tempo" 4=104
-      \time 4/4 cs'16 e a, gs \subdivide-beams #1/8 2 { \tuplet 3/2 { cs16 a e' } } fs,32( gs a ds32) 4 e |
+      \time 4/4 cs'16 e a, gs \set subdivideBeams = ##t \tuplet 3/2 { cs16 a e' } \unset subdivideBeams fs,32( gs a ds32) 4 e |
       \time 3/4 ds16 cs e fs ds \change Staff="down" ds, e a, cs, \change Staff="up" gs'' e' e, |
       \time 4/4
       \tuplet 3/2 4 { ds8 e cs a' c gs } \change Staff="down" f,,16 c' \change Staff="up" c' e cs' \change Staff="down" e,, a, \change Staff="up" cs' |
@@ -418,7 +408,7 @@
 
       r4 ef'2. |
       r8df' c4~ \tuplet 3/2 { 8 e, a } e'4~ |
-      4 df8 \tuplet 3/2 8 { <bf gf>16 e, df \subdivide-beams #1/8 2 { e8 <c' e,>16 g bf8 } } |
+      4 df8 \tuplet 3/2 8 { <bf gf>16 e, df \set subdivideBeams = ##t e8 <c' e,>16 g bf8 \unset subdivideBeams } |
       a,8.-> a'16 e4 \clef "bass" \acciaccatura { \bar "" e,,16  } | \bar "|"
       <ef c>2-^ r8 c'' |
       s2 \stemDown \tuplet 6/4 { fs16 e g fs e \change Staff="up" g \change Staff="down" } \stemNeutral s4 |
