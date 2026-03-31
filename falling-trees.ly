@@ -593,7 +593,7 @@
     \numericTimeSignature
     \context {
       \Score
-      rehearsalMarkFormatter = #format-mark-alphabet
+      rehearsalMarkFormatter = #format-mark-box-alphabet
       \override TupletBracket.bracket-visibility = #'if-no-beam
     }
     \context {
