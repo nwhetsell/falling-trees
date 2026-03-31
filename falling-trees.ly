@@ -610,30 +610,49 @@
 
 \paper {
   #(set-paper-size "letter")
-  indent = 0
+
   left-margin = 0.5\in
   top-margin = 0.5\in
   right-margin = 0.5\in
   bottom-margin = 0.5\in
-
-  max-systems-per-page = 6
-  % page-count = 10
-  % systems-per-page = 5
+  last-bottom-spacing.basic-distance = #(* 0.25 (/ in staff-space))
+  last-bottom-spacing.minimum-distance = last-bottom-spacing.basic-distance
 
   % Based on
   % https://github.com/lilypond/lilypond/blob/master/ly/titling-init.ly
   bookTitleMarkup = \markup {
-    \override #'(baseline-skip . 3.5)
-    \override #'(font-name . "Optima nova LT Pro")
     \column {
-      \abs-fontsize #20
-      \fill-line { \fromproperty #'header:title }
-      \vspace #0.5
       \fill-line {
-        \null
-        \abs-fontsize #12
-        \fromproperty #'header:composer
+        \override #'(baseline-skip . 2.5)
+        \left-column {
+          \abs-fontsize #10
+          "Approximate duration 8 minutes"
+          \abs-fontsize #10
+          "Place grace notes before the beat"
+        }
+
+        \override #'(baseline-skip . 3)
+        \override #'(font-name . "TeX Gyre Pagella")
+        \override #'(font-features . ("onum" "pnum"))
+        \center-column {
+          \abs-fontsize #20
+          \fromproperty #'header:title
+          \abs-fontsize #10
+          \line {
+            #(strftime "%B" (localtime (current-time))) #(string-trim (strftime "%e, %Y" (localtime (current-time))))
+            % "October 6, 2025"
+          }
+        }
+
+        \override #'(font-name . "TeX Gyre Pagella")
+        \right-column {
+          \vspace #0.25
+          \abs-fontsize #12
+          \fromproperty #'header:composer
+        }
       }
+
+      \vspace #0.25
     }
   }
 
@@ -649,6 +668,21 @@
   }
 
   oddHeaderMarkup = \evenHeaderMarkup
+
+  oddFooterMarkup = \markup {
+    \column {
+      \abs-fontsize #6
+      \override #'(font-name . "TeX Gyre Pagella")
+      \override #'(font-features . ("pnum"))
+      \fill-line {
+        \if \on-first-page {
+          \null
+          "© 2022–2026 Nathan Whetsell. All rights reserved."
+          \null
+        }
+      }
+    }
+  }
 }
 
 \header {
