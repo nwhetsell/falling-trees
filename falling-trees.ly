@@ -26,7 +26,7 @@
       R1
       r2 r4 \ottava #1 g''4 |
       fs16( g df') \change Staff="down" df, \change Staff="up" \tuplet 6/4 { c' \change Staff="down" df, e df \change Staff="up" bf e, } \tuplet 3/2 { \change Staff="down" c bf' \change Staff="up" c' } c8 \ottava #0 r4 |
-      \time 3/4 \ottava #2 \tuplet 3/2 8 { g'8[ bf,16] \change Staff="down" c,8[ \change Staff="up" fs'16] df8 \once \override Stem.beaming = #(cons (list 0 1) (list 0)) bf16 } c8 r4 |
+      \time 3/4 \ottava #2 \tuplet 6/4 { g'8 bf,16 \change Staff="down" c,8 \change Staff="up" fs'16 } \tweak bracket-visibility ##t \tuplet 3/2 { df8 bf16 } c8 r4 |
       \time 2/4 \tuplet 6/4 { bf'16 df, bf bf' bf, \change Staff="down" e,16 \change Staff="up" } r4 |
       \time 4/4 c''16 e, e bf' c2. |
 
@@ -291,7 +291,7 @@
       s1 \p \>
       s1 \pp
       s1*2 \cresc
-      s2 \mf s4 \dim
+      s2 \tweak X-offset #-2 \tweak Y-offset #-2 \mf s4 \dim
       s2
       s1*2 \pp
 
