@@ -417,7 +417,7 @@
       \clef "treble" df'2 bf'' |
       s2. \tuplet 3/2 { r8 r e, } |
       s4 r r8 \tuplet 3/2 { fs16 g e } |
-      s4 \tuplet 3/2 { df'16 ef g,~ } 8 |
+      s4 \tuplet 3/2 { df'16 ef g,\laissezVibrer } r8 |
       R1
 
       R1\fermata
