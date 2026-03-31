@@ -409,7 +409,7 @@
       r4 ef'2. |
       r8df' c4~ \tuplet 3/2 { 8 e, a } e'4~ |
       4 df8 \tuplet 3/2 8 { <bf gf>16 e, df \set subdivideBeams = ##t e8 <c' e,>16 g bf8 \unset subdivideBeams } |
-      a,8.-> a'16 e4 \clef "bass" \acciaccatura { \bar "" e,,16  } | \bar "|"
+      a,8.-> a'16 e4 \clef "bass" \acciaccatura { \bar "" e,,8 } | \bar "|"
       <ef c>2-^ r8 c'' |
       s2 \stemDown \tuplet 6/4 { fs16 e g fs e \change Staff="up" g \change Staff="down" } \stemNeutral s4 |
       R1
