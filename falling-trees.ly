@@ -26,10 +26,9 @@
       R1
       r2 r4 \ottava #1 g''4 |
       fs16( g df') \change Staff="down" df, \change Staff="up" \tuplet 6/4 { c' \change Staff="down" df, e df \change Staff="up" bf e, } \tuplet 3/2 { \change Staff="down" c bf' \change Staff="up" c' } c8 \ottava #0 r4 |
-      \time 3/4 \ottava #2 \tuplet 6/4 { g'8 bf,16 \change Staff="down" c,8 \change Staff="up" fs'16 } \tweak bracket-visibility ##t \tuplet 3/2 { df8 bf16 } c8 r4 |
+      \time 3/4 \tweak Y-offset #6 \ottava #2 \tweak bracket-visibility ##t \tweak direction #UP \tuplet 6/4 { g'8 bf,16 \change Staff="down" c,8 \change Staff="up" fs'16 } \tweak bracket-visibility ##t \tweak direction #UP \tuplet 3/2 { df8 bf16 } c8 r4 |
       \time 2/4 \tuplet 6/4 { bf'16 df, bf bf' bf, \change Staff="down" e,16 \change Staff="up" } r4 |
       \time 4/4 c''16 e, e bf' c2. |
-
       R1\fermata \bar "||"
 
       % A
@@ -37,28 +36,28 @@
       \tempo 4=78
       \time 3/4
       <c bf e, df>4-> e,8 a ef-> <df a> |
-      <g g,>8.-> <e fs,>16~8 a,-> bf4 |
+      <g g,>8.-> <e fs,>16\laissezVibrer r8 a,-> bf4 |
       \time 4/4
       \ottava #1 <a bf,>4.-> df,8 <g c,>4 <c, g fs> |
-      <fs df c a>4 <e df bf>8. <ef df>16~8 <a, g ff ef>8~16 <fs bf,>8. |
-      <e' e,>4 <ef ef,>8. \ottava #0 <a, g c, bf>16~8 <bf ef, df> <fs bf,> <e c> |
-      <ef df>8. <fs c>16~8 <g e df bf>8~4 \clef "bass" <e, df bf g e> \clef "treble" |
+      <fs df c a>4 <e df bf>8. <ef df>8. <a, g ff ef>8. <fs bf,>8. |
+      <e' e,>4 <ef ef,>8. \ottava #0 <a, g c, bf>16\laissezVibrer r8 <bf ef, df> <fs bf,> <e c> |
+      <ef df>8.[ <fs c>8. <g e df bf>8.\laissezVibrer r8.] \clef "bass" <e, df bf g e>4 \clef "treble" |
       \set PianoStaff.connectArpeggios = ##t
       \override PianoStaff.Arpeggio.arpeggio-direction = #UP
-      <g' fs e bf>8.\arpeggio ef16~8 <ef g,>~ \tuplet 3/2 4 { 8 df-> <bf ef,>-> <a g ef>-> c-> df-> } |
-      \time 3/4 <df bf a>8-> df c \grace df16 e8 g <gf df c> |
+      <g' fs e bf>8.\arpeggio[ ef8. <ef g,>8\laissezVibrer] \tuplet 3/2 4 { r8[ df-> <bf ef,>->] <a g ef>-> c-> df-> } |
+      \time 3/4 <df bf a>8-> df c \acciaccatura df8 e8 g <gf df c> |
       \time 4/4
-      <bf a fs>8. bf16~8 <c bf g>8 r2 |
+      <bf a fs>8.[ bf8. <c bf g>8.\laissezVibrer r8.] r4 |
       \ottava #1 bf4 <ef df bf>2. |
       <df c>1 |
-      r2 r4 df'~ |
-      \time 3/4 4 bf2 | \bar "||"
+      r2 r4 df'\laissezVibrer |
+      \time 3/4 r4 bf8\laissezVibrer \change Staff="down" g,\laissezVibrer \change Staff="up" r4 | \bar "||"
 
       % B
       \mark \default
       \tempo 4=104
       \time 4/4
-      \ottava #2 c'8 bf \change Staff="down" g,16 \change Staff="up" e'32 \change Staff="down" bf32 g8~8 \change Staff="up" \tuplet 3/2 { a'16 \change Staff="down" bf, g \change Staff="up" } e' ef8. |
+      \ottava #2 c''8 bf \change Staff="down" g,16 \change Staff="up" e'32 \change Staff="down" bf32 g8~8 \change Staff="up" \tuplet 3/2 { a'16 \change Staff="down" bf, g \change Staff="up" } e' ef8. |
       g16 ef df8~8 e16 \change Staff="down" a, \change Staff="up" \ottava #0 s2 |
       \time 5/4
       \ottava #1 \tuplet 3/2 { bf8 df, bf ~ } bf4 df16 c bf a c a fs \change Staff="down" bf, \change Staff="up" e' df a8 |
@@ -416,7 +415,7 @@
       e,1 |
       \clef "treble" df'2 bf'' |
       s2. \tuplet 3/2 { r8 r e, } |
-      s4 r r8 \tuplet 3/2 { fs16 g e } |
+      s4 r r8[ \tuplet 3/2 { fs16 g e] } |
       s4 \tuplet 3/2 { df'16 ef g,\laissezVibrer } r8 |
       R1
 
@@ -427,27 +426,27 @@
       df,4-> r8 <e' c>-> <ef df>4 \ottava #0 |
       <<
         {
-          <g, fs df bf>2-> <e df>4 bf~ |
-          4 <g e>8. df'16~8 <a g fs>8~<a g fs>8. <df, df,>16 |
+          <g, fs df bf>2-> <e df>4 bf\laissezVibrer |
+          r4 <g e>8.[ df'8. <a g fs>8.\laissezVibrer]
         }
         \\
         {
-          r8 bf4 \mf c df fs,8~
-          8 bf~8 df\laissezVibrer
+          r8 bf,4 \mf c df fs,8~
+          8 bf4 df8\laissezVibrer
         }
-      >>
-      <bf' g e>4 <a ef bf>8. <df, g,>16~8 \clef "bass" <ef df,>8~4 |
+      >> r8 <df df,>16 |
+      <bf' g e>4 <a ef bf>8. <df, g,>16\laissezVibrer \clef "bass" r8 <ef df,>4. |
       fs,2. \ottava #-1 <df df,>4 |
-      <c a,>4.\arpeggio \ottava #0 g'8~g2 |
+      <c a,>8.\arpeggio\laissezVibrer[ \ottava #0 r8. g'8\laissezVibrer] r2 |
       r8 e8 bf' fs'8 g,8 bf |
-      \clef "treble" <g' df>8. <e' df>16~8 a,8~16 c8. ef4 |
+      \clef "treble" <g' df>8. <e' df>8. a,8. c8. ef4\laissezVibrer |
       R1*2
       c1 |
-      r4 r8 g'4. |
+      r4 s r |
 
       % B
       s4 \ottava #1 s2. |
-      s2 g'16 bf e, a ef4 \ottava #0 |
+      s2 g''16 bf e, a ef4 \ottava #0 |
       r2. s4 g,, |
       s4 \stemDown gf, bf \stemNeutral s2 |
       df,8 c''~16 bf8.~4 s8. \clef "bass" s16 s4 |
@@ -594,6 +593,7 @@
     \context {
       \Score
       rehearsalMarkFormatter = #format-mark-box-alphabet
+      \override Stem.stemlet-length = #1
       \override TupletBracket.bracket-visibility = #'if-no-beam
     }
     \context {
