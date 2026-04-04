@@ -57,10 +57,10 @@
       \mark \default
       \tempo 4=104
       \time 4/4
-      \ottava #2 c''8 bf \change Staff="down" g,16 \change Staff="up" e'32 \change Staff="down" bf32 g8~8 \change Staff="up" \tuplet 3/2 { a'16 \change Staff="down" bf, g \change Staff="up" } e' ef8. |
-      g16 ef df8~8 e16 \change Staff="down" a, \change Staff="up" \ottava #0 s2 |
+      \ottava #2 c''8 bf \stemDown \change Staff="down" g,16 \change Staff="up" e'32 \change Staff="down" bf32 g8\laissezVibrer \change Staff="up" r8 \tuplet 3/2 { a'16 \change Staff="down" bf, g \change Staff="up" } \stemNeutral e' ef8. |
+      g16 ef df8\laissezVibrer r[ e16 \change Staff="down" a,] \change Staff="up" \ottava #0 s2 |
       \time 5/4
-      \ottava #1 \tuplet 3/2 { bf8 df, bf ~ } bf4 df16 c bf a c a fs \change Staff="down" bf, \change Staff="up" e' df a8 |
+      \ottava #1 \tuplet 3/2 { bf8 df, bf\laissezVibrer } r4 df16 c bf a c a fs \change Staff="down" bf, \change Staff="up" e' df a8 |
       \tuplet 6/4 4 {
         df16 bf e, df \change Staff="down" g, df \change Staff="up"
         e''16 g, ef df \change Staff="down" bf e, \change Staff="up"
@@ -68,19 +68,20 @@
         g16 \change Staff="down" e ef df a \change Staff="up" e'
       } \tuplet 3/2 { bf8 \change Staff="down" e, df \change Staff="up" } |
       \tempo "a tempo"
-      <e'' e,>4 e \tuplet 3/2 { e8 df ef, } <a df,>16 g c, \change Staff="down" g, \change Staff="up" \ottava #0 ef'' df gf, \change Staff="down" df \change Staff="up" |
-      \time 7/8 bf'16 gf' \tuplet 3/2 { ef16 \change Staff="down" e, a, \change Staff="up" } \tuplet 3/2 { \change Staff="down" fs \change Staff="up" gf'' df~ } 8 \tuplet 3/2 { g16 e df } \tuplet 3/2 { bf16 a' e~ } 8~ |
-      \time 3/4 8 g16 c,~4 \change Staff="down" e,,16 a, \change Staff="up" bf'' \change Staff="down" a,,, \change Staff="up" |
-      \time 3/8 \tuplet 3/2 { g''''8 e ef~ } 8\noBeam |
+      <e'' e,>4 e16 \change Staff="down" bf,8.\laissezVibrer \change Staff="up" \tuplet 3/2 { e'8 df ef, } <a df,>16 g c, \change Staff="down" g, \change Staff="up" \ottava #0 ef'' df gf, \change Staff="down" df \change Staff="up" |
+      \time 2/4 \set subdivideBeams = ##t bf'16 gf' \tweak bracket-visibility ##t \tuplet 3/2 { ef16 \change Staff="down" e, a, \change Staff="up" } \unset subdivideBeams \tuplet 3/2 { \change Staff="down" fs \change Staff="up" gf'' df\laissezVibrer } r8 |
+      \time 3/8 \tuplet 6/4 { g16 e df bf a' e\laissezVibrer } r8 |
+      \time 3/4 \change Staff="down" df,,,8 \change Staff="up" g'''16 c,\laissezVibrer s4 \change Staff="down" e,,16 a, \change Staff="up" bf'' \change Staff="down" a,,, \change Staff="up" |
+      \time 3/8 \tuplet 3/2 { g''''8 e ef\laissezVibrer } r8 |
       \time 3/4
       ef8 g,16 \change Staff="down" g,16 \change Staff="up" \tuplet 3/2 { a'8 g \change Staff="down" ef \change Staff="up" } df'16 c df \change Staff="down" df, \change Staff="up" |
       \change Staff="down" c,16 \change Staff="up" e'' bf df c8~ \tuplet 3/2 { 16 df e } \tuplet 3/2 { \change Staff="down" fs, \change Staff="up" bf g' } \change Staff="down" g,,8 \change Staff="up" |
       \time 4/4
-      \change Staff="down" \tuplet 3/2 8 { bf16 a8 \change Staff="up" gf''16 df \change Staff="down" bf, \change Staff="up" } bf'' a gf \change Staff="down" g, df \change Staff="up" bf'' e, ef~4 |
-      \ottava #1 c'16 bf8.~4 \tuplet 3/2 { \change Staff="down" e,,8 \change Staff="up" df'' bf } e, \change Staff="down" g,, \change Staff="up" |
-      s2. c''16 ef,8. |
-      \change Staff="down" ef16 bf \change Staff="up" \tuplet 3/2 { df'16 c8~ } 4~2~ |
-      \time 6/4 4 \tuplet 3/2 { \change Staff="down" c,8 \change Staff="up" df' \change Staff="down" fs, \change Staff="up" g' \change Staff="down" g,4~ } 2. \change Staff="up" | \bar "||"
+      \change Staff="down" \tweak bracket-visibility ##t \tweak TupletBracket.padding #1.7 \tuplet 6/4 { bf16 a8 \change Staff="up" gf''16 df \change Staff="down" bf, \change Staff="up" } bf'' a gf \change Staff="down" g, df \change Staff="up" bf'' e, ef\laissezVibrer s4 |
+      \ottava #1 c'16 bf8 \change Staff="down" c,16 s4 \tuplet 3/2 { e,8 \change Staff="up" df'' bf } e, \change Staff="down" g,, \change Staff="up" |
+      s4 r r c''16 ef,8. |
+      \change Staff="down" ef16 bf \change Staff="up" df' c\laissezVibrer r4 r2 |
+      r4 \tupletUp \tweak bracket-visibility ##t \tweak TupletBracket.padding #2 \tuplet 3/2 { \change Staff="down" c,8 \change Staff="up" df' \change Staff="down" fs, } \tweak bracket-visibility ##t \tuplet 3/2 { \change Staff="up" g' \change Staff="down" g,4~ } \tupletNeutral 4\fermata \change Staff="up" | \bar "||"
 
       % C
       \mark \default
@@ -308,14 +309,14 @@
       % B
       s1*2 \pp
       s1*5/4*2 \cresc
-      s4 \f s1 \cresc
+      s4 \f s s2. \cresc
       s1*7/8
       s2. \ff
       s4. \dim
       s2.*2
       s1
-      s1*3 \pp
-      s1.
+      s1*3 \tweak Y-offset #-6.2 \pp
+      s1
 
       % C
       s2. \pp
@@ -447,19 +448,20 @@
       % B
       s4 \ottava #1 s2. |
       s2 g''16 bf e, a ef4 \ottava #0 |
-      r2. s4 g,, |
+      s2. s4 g,, |
       s4 \stemDown gf, bf \stemNeutral s2 |
-      df,8 c''~16 bf8.~4 s8. \clef "bass" s16 s4 |
-      df,,4 s8 s r r bf'16 e, |
-      df,4 \clef "treble" fs''16 e df \clef "bass" g, s4 |
+      df,8 c''\laissezVibrer s16 s8. s4 s8. \clef "bass" s16 s4 |
+      df,,4 s8 s |
+      r r bf'16 e, |
+      s4 \clef "treble" fs'16 e df \clef "bass" g, s4 |
       r8 r c |
       \stemDown c,4 \stemNeutral s2 |
       s2 \clef "treble" s4 |
       s2. df'16 c a bf |
-      df8. c'16 \tuplet 3/2 { a8 ef'8 bf } s2 |
-      \change Staff="up" ef'16 e, \change Staff="down" df,8~4~4~16 e8. |
-      s2 e'16 df8.~4~ |
-      df4 s s1 |
+      df4 \tuplet 3/2 { a'8 ef'8 bf } s2 |
+      \change Staff="up" ef'16\laissezVibrer e,\laissezVibrer \change Staff="down" df,8\laissezVibrer r4 r4 s16 \crossStaff { e8. } |
+      s4 r e'16 df8.\laissezVibrer r4 |
+      r4 s2. |
 
       % C
       s4 r s |
