@@ -308,7 +308,7 @@
       s2.
       s2 \f \<
       s2. \ff \>
-      s4 \mf s2. \tweak Y-offset #-1 \dim
+      s4 \tweak X-offset #-3.5 \mf s2. \tweak Y-offset #-1 \dim
       s1 \p \>
       s1 \pp
       s1*2 \cresc
@@ -434,14 +434,13 @@
       r8 df' c4\laissezVibrer \tuplet 3/2 { r8[ e, a] } e'4\laissezVibrer |
       \override TextSpanner.dash-period = #1
       \override TextSpanner.dash-fraction = #0.3
-      % \override TextSpanner.direction = #DOWN
       \override TextSpanner.bound-details.left.padding = #-4.1
       \override TextSpanner.bound-details.left.text = \markup { \italic { "loco " } }
       \override TextSpanner.bound-details.right.text = \markup { \draw-line #'(0 . -0.8) }
       \override TextSpanner.bound-details.right-broken.padding = #0
       \override TextSpanner.bound-details.right.padding = #-1
       \override TextSpanner.bound-details.right-broken.text = ""
-      s4 \stemDown \tuplet 6/4 { df16\startTextSpan \change Staff="up" g df' \change Staff="down" <bf, gf> e,16 df } \tuplet 3/2 { e8 <c' e,>16 g  bf8\stopTextSpan \stemNeutral } |
+      s4 \stemDown \once \override Beam.positions = #'(-3.5 . -5) \tuplet 6/4 { df16\startTextSpan \change Staff="up" g df' \change Staff="down" <bf, gf> e,16 df } \tuplet 3/2 { e8 <c' e,>16 g  bf8\stopTextSpan \stemNeutral } |
       a,8.-> a'16 e4 \clef "bass" |
       \acciaccatura e,,8 <ef c>2-^ r8 c'' |
       s2 \stemDown \tuplet 6/4 { fs16 e g fs e \change Staff="up" g \change Staff="down" } \stemNeutral s4 |
