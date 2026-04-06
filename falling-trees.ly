@@ -14,12 +14,15 @@
       \accidentalStyle piano
       \key g \minor
 
-      \tempo 4=112
+      \tempo \markup {
+        "Supple"
+        \normal-text \concat { "(" \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 112)" }
+      }
       \time 4/4
-      \ottava #1 c''''8(^"With lots of pedal" \tuplet 3/2 { df16 bf df } ef8.) \set subdivideBeams = ##t bf16 16( g \tuplet 3/2 { e' a, g } \unset subdivideBeams e'8.) df,16 |
+      \ottava #1 c''''8^"With lots of pedal" \tuplet 3/2 { df16 bf df } ef8. \set subdivideBeams = ##t bf16 16 g \tuplet 3/2 { e' a, g } \unset subdivideBeams e'8. df,16 |
       \tuplet 6/4 4 { df'16 bf fs c ef a, df fs g ef g a bf, df g bf, df fs bf, e bf g a ef' } |
       \time 3/4 \tuplet 6/4 { ef,16 fs' bf, ef, df' ef } \stemDown \tuplet 6/4 { \crossStaff { ef16 } s16*3 \crossStaff { e16 } s } \tuplet 3/2 { \crossStaff { <e e,>8 } s \crossStaff { <ef gf,> } } \stemNeutral |
-      \time 2/4 <df bf>4-> \ottava #0 \set subdivideBeams = ##t ef,16 bf' ef,32( e g a) \unset subdivideBeams |
+      \time 2/4 <df bf>4-> \ottava #0 \set subdivideBeams = ##t ef,16 bf' ef,32 e g a \unset subdivideBeams |
       \time 3/4 \grace s8 <bf bf,>4-^ ef, \acciaccatura g8 ef8 a |
       \time 4/4 g16 ef \change Staff="down" g,,8 \change Staff="up" c'16 bf df \change Staff="down" e, \change Staff="up" \once \override TupletNumber.stencil = ##f \tuplet 6/4 { s8. \crossStaff { df'16 } s8 } \change Staff="down" e,,8[ \change Staff="up" c''] |
       bf8. g16 g4 a2 |
@@ -43,7 +46,7 @@
 
       % A
       \mark \default
-      \tempo 4=78
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 78" } }
       \time 3/4
       \ottava 2 <c bf e, df>4-> e,8 a ef-> <df a> |
       <g g,>8.-> <e fs,>16\laissezVibrer r8 a,-> bf4 |
@@ -65,7 +68,7 @@
 
       % B
       \mark \default
-      \tempo 4=104
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 104" } }
       \time 4/4
       \ottava 2 c''8 bf \stemDown \change Staff="down" g,16 \change Staff="up" e'32 \change Staff="down" bf32 g8\laissezVibrer \change Staff="up" r8 \tuplet 3/2 { a'16 \change Staff="down" bf, g \change Staff="up" } \stemNeutral e' ef8. |
       g16 ef df8\laissezVibrer r[ e16 \change Staff="down" a,] \change Staff="up" \ottava #0 s2 |
@@ -74,10 +77,10 @@
       \tuplet 6/4 4 {
         df16 bf e, df \change Staff="down" g, df \change Staff="up"
         e''16 g, ef df \change Staff="down" bf e, \change Staff="up"
-        ef''16^\markup { \italic "molto rit." } df a g \change Staff="down" df \change Staff="up" a'
+        ef''16^\markup { \italic "molto ritard." } df a g \change Staff="down" df \change Staff="up" a'
         g16 \change Staff="down" e ef df a \change Staff="up" e'
       } \tuplet 3/2 { bf8 \change Staff="down" e, df \change Staff="up" } |
-      \tempo "a tempo"
+      \tempo \markup { "a tempo" \normal-text \concat { "(" \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 104)" } }
       <e'' e,>4 e16 \change Staff="down" bf,8.\laissezVibrer \change Staff="up" \tuplet 3/2 { e'8 df ef, } <a df,>16 g c, \change Staff="down" g, \change Staff="up" ef'' df gf, \change Staff="down" df \change Staff="up" |
       \time 2/4 \set subdivideBeams = ##t bf'16 gf' \tweak bracket-visibility ##t \tuplet 3/2 { ef16 \change Staff="down" e, a, \change Staff="up" } \unset subdivideBeams \tuplet 3/2 { \change Staff="down" fs \change Staff="up" gf'' df\laissezVibrer } r8 |
       \time 3/8 \tuplet 6/4 { g16 e df bf a' e\laissezVibrer } r8 |
@@ -100,20 +103,20 @@
       \time 4/4 ef''16 c bf g e \change Staff="down" c a g \change Staff="up" \tuplet 6/4 { bf'16 g fs e \change Staff="down" ef c \change Staff="up" } \tuplet 6/4 { bf'16 g fs e \change Staff="down" df bf \change Staff="up" } |
       \time 3/4
       g'16 gf ef \change Staff="down" fs, \change Staff="up" bf' e, bf \change Staff="down" g \change Staff="up" df' \change Staff="down" bf, \change Staff="up" df'' bf |
-      \tempo \markup { \normal-text { \italic "poco rit." } }
+      \tempo \markup { \normal-text { \italic "poco ritard." } }
       \tuplet 3/2 4 { g8 \change Staff="down" fs, df \change Staff="up" df' \change Staff="down" g, e \change Staff="up" df' bf \change Staff="down" a \change Staff="up" } |
       g'16 df c \change Staff="down" ef, s4 \stemUp \tuplet 6/4 { bf16 g' \change Staff="up" ef' \change Staff="down" bf, \change Staff="up" g'' \change Staff="down" e, \change Staff="up" } \stemNeutral |
       \time 4/4
-      \tuplet 6/4 4 { \change Staff="down" g,16 e ef \change Staff="up" e'' ef df \change Staff="down" a,, \change Staff="up" g'' \change Staff="down" bf, df, \change Staff="up" a'' e } \tempo 4=96 c4 bf'16 e, df \change Staff="down" a, \change Staff="up" | \bar "||"
-      \tempo \markup { \normal-text { \italic "molto rit." } }
+      \tuplet 6/4 4 { \change Staff="down" g,16 e ef \change Staff="up" e'' ef df \change Staff="down" a,, \change Staff="up" g'' \change Staff="down" bf, df, \change Staff="up" a'' e } \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 96" } } c4 bf'16 e, df \change Staff="down" a, \change Staff="up" | \bar "||"
+      \tempo \markup { \normal-text { \italic "molto ritard." } }
       \key e \major
       cs''!16 a fs \change Staff="down" cs \change Staff="up" e' \change Staff="down" cs,! c gs c, \change Staff="up" e' fs c' \tuplet 6/4 { e <ds! a> ds a \change Staff="down" c, a \change Staff="up" } |
-      \tempo "a tempo" 4=104
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 104" } }
       a''16 gs \! e \change Staff="down" a, \change Staff="up" fs' e gs, \change Staff="down" c, \change Staff="up" a''32 cs a8. <a c,>4 |
       a4 s s \tuplet 3/2 { gs'8 fs ds } |
-      \time 5/4 gs8 cs, a' e \tuplet 3/2 { gs8 a, gs } \tempo \markup { \normal-text { \italic "rit." } } gs'16 c, a gs' ds a8. |
+      \time 5/4 gs8 cs, a' e \tuplet 3/2 { gs8 a, gs } \tempo \markup { \normal-text { \italic "ritard." } } gs'16 c, a gs' ds a8. |
       \time 4/4
-      \tempo 4=72
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 72" } }
       \tweak shorten-pair #'(0 . 0.1) \ottava 1 \tuplet 3/2 { c'16 a gs } \ottava 0 \change Staff="down" e,8\laissezVibrer \change Staff="up" r4 \change Staff="down" \acciaccatura cs'8 fs,[ \change Staff="up" \tuplet 3/2 { r16 \ottava 1 a' gs]\laissezVibrer] \ottava 0 } r4 | \bar "||"
 
       % D
@@ -122,26 +125,26 @@
       r2 r4 \ottava 1 cs16 e,8.\laissezVibrer \ottava 0 |
       \time 3/2 s16^\markup { \italic "accel." } s8. r4 \tuplet 3/2 { gs,,8 c gs'\laissezVibrer } r4 \tuplet 3/2 { gs,8 a cs4 fs, 8\change Staff="down" gs, \change Staff="up" } |
       \time 4/4
-      \tempo "a tempo" 4=104
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 104" } }
       cs'16 fs, \change Staff="down" gs, \change Staff="up" cs' c gs e a e'8 cs16 \change Staff="down" a, \change Staff="up" a' fs ds \change Staff="down" gs, |
       \tuplet 6/4 4 { e16 \change Staff="up" a' gs \change Staff="down" ds, cs' c \change Staff="up" cs' gs e e'16 ds \change Staff="down" fs, } fs, \change Staff="up" c'' cs, \change Staff="down" cs, ds \change Staff="up" c' \change Staff="down" a,8 \change Staff="up" |
       \time 3/4
       ds''16 cs gs \change Staff="down" e, \change Staff="up" \tuplet 3/2 { a'8 e \change Staff="down" ds, \change Staff="up" } s4 |
       <ds''! c cs,!>4->^\markup { \italic "accel." } \tuplet 3/2 { \tweak Y-offset #6 \ottava 2 a'''8-^ \ottava 0 \change Staff="down" a,, gs \change Staff="up" } s4 |
       r4 \tuplet 3/2 { a,8 e \change Staff="down" cs \change Staff="up" } cs'16 \change Staff="down" a \change Staff="up" e' \change Staff="down" ds, \change Staff="up" |
-      \tempo 4=144
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 144" } }
       \tuplet 3/2 4 { ds'8 \change Staff="down" a fs \change Staff="up" cs' \change Staff="down" a c, \change Staff="up" } gs''16 cs, a' e |
-      \tempo \markup { \normal-text { \italic "rit." } }
+      \tempo \markup { \normal-text { \italic "ritard." } }
       gs16 e ds \change Staff="down" c \change Staff="up" \tuplet 3/2 { a'8 gs gs } a \change Staff="down" gs, \change Staff="up" |
       \time 4/4
       cs'8 a ds4 \tuplet 3/2 { e4 ds8 } \tuplet 3/2 { fs4 e8 } |
-      \tempo 4=129
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 129" } }
       gs16 cs, \change Staff="down" e,16 a, gs e' \change Staff="up" gs \change Staff="down" c,\laissezVibrer \change Staff="up" r8[ a'16 gs] \change Staff="down" a,8 \change Staff="up" gs''16 gs, |
       \time 3/4
-      \tempo \markup { \normal-text { \italic "molto rit." } }
+      \tempo \markup { \normal-text { \italic "molto ritard." } }
       r4 \ottava 1 \tuplet 3/2 { gs'8 c a } \tupletUp \tweak TupletBracket.padding #2 \tuplet 3/2 { c,8 \ottava 0 \change Staff="down" ds,4 \change Staff="up" } \tupletNeutral |
       \ottava 1 a''16 \ottava 0 \change Staff="down" gs, gs,8\laissezVibrer \change Staff="up" r4 r |
-      \tempo 4=72
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 72" } }
       \ottava 1 a''16 a,8. a'16 b,8.\laissezVibrer r4 |
       gs'16 a,8. c'16 c,8.\laissezVibrer r4 |
       \time 4/4
@@ -152,19 +155,19 @@
 
       % E
       \mark \default
-      \tempo 4=156
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 156" } }
       \time 3/4 r4 e'8 a, cs4 |
       \time 4/4
-      \tuplet 3/2 { \change Staff="down" e,,8 b' \change Staff="up" cs' } cs4 \acciaccatura { \slurUp cs,8 } a'4 \slurNeutral \tempo \markup { \normal-text { \italic "rit." } } \tuplet 3/2 { b,8 fs cs } |
-      \tempo "a tempo" 4=104
+      \tuplet 3/2 { \change Staff="down" e,,8 b' \change Staff="up" cs' } cs4 \acciaccatura { \slurUp cs,8 } a'4 \slurNeutral \tempo \markup { \normal-text { \italic "ritard." } } \tuplet 3/2 { b,8 fs cs } |
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 104" } }
       \change Staff="down" a,16 ds \change Staff="up" e' \change Staff="down" a,,, \change Staff="up" \tuplet 3/2 { ds'''8 e, \change Staff="down" a,, \change Staff="up" } a''16 cs, cs' \change Staff="down" gs,, \change Staff="up" s4 |
-      \tempo \markup { \normal-text { \italic "poco più mosso" } } 4=120
+      \tempo \markup { \normal-text { \italic "poco più mosso" \concat { "(" \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 120)" } } }
       a''16 \change Staff="down" gs, cs a \change Staff="up" e'' ds a \change Staff="down" gs, \change Staff="up" s4 a'16 \change Staff="down" cs, \change Staff="up" gs'' ds |
       \time 3/4 \change Staff="down" a,16 gs \change Staff="up" gs'' a \tuplet 3/2 { a,8 fs' e } s4 |
-      \tempo \markup { \normal-text { \italic "rit." } }
+      \tempo \markup { \normal-text { \italic "ritard." } }
       \time 4/4 cs'8 \change Staff="down" a, \change Staff="up" a' \change Staff="down" cs, \tuplet 3/2 { e, gs \change Staff="up" b' } \stemUp \once \override Beam.positions = #'(8 . 7) e16 a, cs ds, |
       \time 2/4 \once \override Beam.positions = #'(8 . 8) b'16 \change Staff="down" <e, fs,> \change Staff="up" fs' \change Staff="down" ds, \change Staff="up" \once \override Beam.positions = #'(8.5 . 7) gs' e ds \change Staff="down" cs, \change Staff="up" \stemNeutral \revert Beam.positions |
-      \tempo "a tempo" 4=104
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 104" } }
       \time 4/4
       \tuplet 7/4 { \change Staff="down" a,16 \change Staff="up" gs''' \change Staff="down" a,, gs \change Staff="up" ds'' a' \change Staff="down" cs,, } \tuplet 3/2 4 { fs,8 \change Staff="up" a' \change Staff="down" ds, \change Staff="up" r8 a'4 gs'8 gs, \change Staff="down" e \change Staff="up" } |
       r4 \ottava 1 ds''16 cs gs8\laissezVibrer \ottava 0 r4 \tuplet 3/2 { a4 fs8\laissezVibrer } |
@@ -179,21 +182,21 @@
       \time 5/4 s2. \change Staff="down" a,,16 ds \change Staff="up" ds'8\laissezVibrer r4 |
       \tempo \markup { \normal-text { \italic "accel." } }
       \time 3/2 \change Staff="down" gs,,,16 \change Staff="up" e'' gs8\laissezVibrer r4 \change Staff="down" b,,16 \change Staff="up" ds'16 ds'8\laissezVibrer r4 \tuplet 3/2 { \change Staff="down" gs,,,16 gs' \change Staff="up" cs' } b8\laissezVibrer r16 gs8. |
-      \tempo 4=155
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 155" } }
       \time 4/4 cs4\arpeggio \change Staff="down" a,16 \change Staff="up" gs'8. \tuplet 3/2 4 { \change Staff="down" cs,,8 \change Staff="up" b'' gs a \change Staff="down" a,, b \change Staff="up" } |
-      \tempo \markup { \normal-text { \italic "rit." } }
+      \tempo \markup { \normal-text { \italic "ritard." } }
       \tuplet 3/2 4 { cs'8 gs' \change Staff="down" b,,8 a \change Staff="up" ds' cs] } \change Staff="down" gs, ds' e \change Staff="up" a |
       \time 2/4 \tuplet 3/2 4 { ds fs, b e gs, \change Staff="down" a, \change Staff="up" } |
-      \tempo "a tempo" 4=104
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 104" } }
       \time 3/4
       \change Staff="down" ds16 \change Staff="up" <fs' ds> e \change Staff="down" gs,, ds' \change Staff="up" cs' e \change Staff="down" a, \change Staff="up" \acciaccatura { \slurUp ds8 } ds'8 \slurNeutral \change Staff="down" cs, \change Staff="up" |
       \tempo \markup { \normal-text { \italic "accel." } }
       \change Staff="down" cs,16 fs, \change Staff="up" e'' ds \tuplet 3/2 { \change Staff="down" gs,8 \change Staff="up" a' gs } a,16 \change Staff="down" c, e, \change Staff="up" ds'' |
       \time 5/4
-      \tempo \markup { \normal-text { \italic "rit." } }
+      \tempo \markup { \normal-text { \italic "ritard." } }
       gs16 \change Staff="down" e, \change Staff="up" a' \change Staff="down" e, \change Staff="up" s4 \set subdivideBeams = ##t \tuplet 3/2 { e''16 gs, cs, } ds'16 \change Staff="down" <c, a> \change Staff="up" \unset subdivideBeams e' cs b gs\laissezVibrer r4 |
       gs'16 cs, \change Staff="down" e, a, fs \change Staff="up" a' fs \change Staff="down" a, \change Staff="up" gs' e \change Staff="down" c a \change Staff="up" e''4 e, |
-      \tempo "a tempo"
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 104" } }
       \time 4/4
       r8 \ottava 1 gs'16 e a fs \ottava 0 \change Staff="down" e, ds \change Staff="up" r2 |
       r8. gs'16 fs4\laissezVibrer r8. cs16 r8. a'16\laissezVibrer |
@@ -201,36 +204,36 @@
       b1 |
       r2 cs, |
       e2\laissezVibrer r4 cs |
-      \tempo \markup { \normal-text { \italic "rit." } }
+      \tempo \markup { \normal-text { \italic "ritard." } }
       \change Staff="down" gs,8 \change Staff="up" fs'\laissezVibrer r4 r8 cs'8 gs' \change Staff="down" gs,,16 ds' \change Staff="up" | \bar "||"
 
       % G
-      \tweak X-offset #4 \mark \default
-      \once \override Score.MetronomeMark.Y-offset = 7 \tempo 4=78
+      \tweak X-offset #6 \mark \default
+      \once \override Score.MetronomeMark.Y-offset = 7 \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 78" } }
       s4 \tupletUp \tuplet 3/2 { \once \override NoteColumn.X-offset = 0.75 ds'8 a4 } \tupletNeutral s4 c16 e c, \change Staff="down" e,, \change Staff="up" |
-      \tempo "a tempo" 4=104
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 104" } }
       r16 e'( gs fs ds'[ fs) r a,]( cs e a gs ds) \change Staff="down" e,, \change Staff="up" cs'' e |
       \time 3/4 fs4 \set subdivideBeams = ##t \tuplet 3/2 { \change Staff="down" ds,16 \change Staff="up" ds' gs } a \change Staff="down" e, \unset subdivideBeams fs \change Staff="up" fs' a, gs' |
       \time 4/4
-      \tempo \markup { \normal-text { \italic "rit." } }
+      \tempo \markup { \normal-text { \italic "ritard." } }
       r16 e,( gs fs cs' e) \change Staff="down" a,, \change Staff="up" gs' \change Staff="down" fs, cs' \change Staff="up" a' fs'-> \change Staff="down" cs,, a' \change Staff="up" e'16 d'-> |
-      \tempo 4=78
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 78" } }
       r16 cs, e c'-> r gs, c a' \tempo \markup { \normal-text { \italic "accel." } } \tuplet 3/2 4 { <cs fs,>8-> fs,, gs cs' a <gs e>\laissezVibrer } |
-      \tempo 4=104
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 104" } }
       r4 \change Staff="down" e'8 \change Staff="up" \ottava 1 \tuplet 3/2 { c''16 gs \ottava 0 \change Staff="down" a, } a,8 \change Staff="up" \tuplet 3/2 { \ottava 1 ds''16 c e,\laissezVibrer \ottava 0 } r4 |
       r8. \ottava 1 e16 \ottava 0 r4 r8 \ottava 1 a~ \tuplet 3/2 { 8 ds, a~ } |
       \tuplet 3/2 { 8 cs c~ } 4 cs2 |
       fs16 c8.\laissezVibrer r8 gs'16 gs, \ottava 0 r2 |
-      \tempo \markup { \normal-text { \italic "molto rit." } }
+      \tempo \markup { \normal-text { \italic "molto ritard." } }
       e'4\laissezVibrer r a,\laissezVibrer r | \bar "||"
 
       % H
       \mark \default
-      \time 5/4 r2 fs8. gs,16 \tempo 4=46 a'8 a16 a, <a' fs>4 |
+      \time 5/4 r2 fs8. gs,16 \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 46" } } a'8 a16 a, <a' fs>4 |
       \tempo \markup { \normal-text { \italic "accel." } }
       \time 6/4 b,16 e'8. cs16 gs a cs, \change Staff="down" gs,16 ds' \change Staff="up" fs' gs \change Staff="down" cs,, \change Staff="up" e' a cs \change Staff="down" a,, gs' a \change Staff="up" b' ds, \change Staff="down" cs, ds e \change Staff="up" |
-      \tempo "a tempo" 4=104
-      \time 4/4 cs'16 e a, gs \set subdivideBeams = ##t \tuplet 3/2 { cs16 a e' } \unset subdivideBeams fs,32( gs a ds32) 4 e |
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 104" } }
+      \time 4/4 cs'16 e a, gs \set subdivideBeams = ##t \tuplet 3/2 { cs16 a e' } \unset subdivideBeams fs,32 gs a ds32 4 e |
       \time 3/4 ds16 cs e fs ds \change Staff="down" ds, e a, cs, \change Staff="up" gs'' e' e, |
       \time 4/4
       \tuplet 3/2 4 { ds8 e cs a' c gs } \change Staff="down" f,,16 c' \change Staff="up" c' e cs' \change Staff="down" e,, a, \change Staff="up" cs' |
@@ -240,9 +243,9 @@
       \time 4/4
       \tuplet 3/2 { cs'8 e,16 } c'8\laissezVibrer r8. e16 r4 r16 ds,8 ds16 |
       r8. ds'16 r8. cs16 a4 r8. cs16 |
-      \tempo \markup { \normal-text { \italic "rit." } }
+      \tempo \markup { \normal-text { \italic "ritard." } }
       c2 r8. a16 fs'8. gs,16 |
-      \tempo 4=84
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 84" } }
       gs'4 r8. gs,16 e'8 \change Staff="down" cs, \tuplet 3/2 { gs16 c ds } \change Staff="up" a'8\laissezVibrer | \bar "||"
 
       % I
@@ -251,13 +254,13 @@
       r2 \tuplet 3/2 { \change Staff="down" gs,16 ds' \change Staff="up" ds' } ds8 ds4 fs, |
       \tempo \markup { \normal-text { \italic "accel." } }
       \tuplet 3/2 { e'8 \change Staff="down" a,, \change Staff="up" a' } fs'16 fs cs8 \change Staff="down" gs,16 \change Staff="up" fs' ds' e, \tuplet 3/2 { ds'8 \change Staff="down" ds, e, \change Staff="up" } r gs' |
-      \tempo \markup { \normal-text { \italic "rit." } }
+      \tempo \markup { \normal-text { \italic "ritard." } }
       <<
-        { \stemDown ds'8[ cs ds e] cs[ e b gs] \stemUp fs4 }
+        { \stemDown ds'8([ cs ds e] cs[ e b gs] \stemUp fs4) }
         \\
         { s1 \once \override Beam.positions = #'(-6 . -5) \tuplet 6/4 { fs16 \change Staff="down" \stemUp cs b e, \stemNeutral \change Staff="up" cs' cs' } }
       >> |
-      \tempo 4=75
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 75" } }
 
       <<
         { gs8 cs, }
@@ -270,9 +273,9 @@
       r4 a8 \change Staff="down" fs, \change Staff="up" b'16 \change Staff="down" gs, e \change Staff="up" ds''\laissezVibrer s4 e16 \change Staff="down" a, \change Staff="up" gs' \change Staff="down" gs, \change Staff="up" |
       \time 4/4
       \change Staff="down" b16 \change Staff="up" b' e, e, \tuplet 6/4 4 { \change Staff="down" e,16 a ds gs, \change Staff="up" fs' gs gs' e ds \change Staff="down" a, b ds \change Staff="up" } \tuplet 3/2 { \change Staff="down" fs \change Staff="up" cs' gs } gs'8 |
-      \tempo "a tempo" 4=104
-      ds'8 e ds a cs e b8. gs16 |
-      fs4 s \set subdivideBeams = ##t \tuplet 3/2 { a8 fs16 gs' \change Staff="down" cs,,,16 cs' \change Staff="up" } r16[ cs' ds32 e ds gs] \unset subdivideBeams |
+      \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 104" } }
+      ds'8( e ds a cs e b8. gs16 |
+      fs4) s \set subdivideBeams = ##t \tuplet 3/2 { a8 fs16 gs' \change Staff="down" cs,,,16 cs' \change Staff="up" } r16[ cs' ds32 e ds gs] \unset subdivideBeams |
       a1 |
 
       R1\fermata \bar "||"
@@ -634,7 +637,7 @@
     }
   }
   \midi {
-    \tempo 4=112
+    \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 112" } }
   }
 }
 
