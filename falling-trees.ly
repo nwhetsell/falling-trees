@@ -84,7 +84,7 @@
       <e'' e,>4 e16 \change Staff="down" bf,8.\laissezVibrer \change Staff="up" \tuplet 3/2 { e'8 df ef, } <a df,>16 g c, \change Staff="down" g, \change Staff="up" ef'' df gf, \change Staff="down" df \change Staff="up" |
       \time 2/4 \set subdivideBeams = ##t bf'16 gf' \tweak bracket-visibility ##t \tuplet 3/2 { ef16 \change Staff="down" e, a, \change Staff="up" } \unset subdivideBeams \tuplet 3/2 { \change Staff="down" fs \change Staff="up" gf'' df\laissezVibrer } r8 |
       \time 3/8 \tuplet 6/4 { g16 e df bf a' e\laissezVibrer } r8 |
-      \time 3/4 \change Staff="down" df,,,8 \change Staff="up" g'''16 c,\laissezVibrer s4 \change Staff="down" e,,16 a, \change Staff="up" bf'' \change Staff="down" a,,, \change Staff="up" |
+      \time 3/4 r8 g16 c,\laissezVibrer s4 \change Staff="down" e,,16 a, \change Staff="up" bf'' \change Staff="down" a,,, \change Staff="up" |
       \time 3/8 \tuplet 3/2 { g''''8 e ef\laissezVibrer } r8 |
       \time 3/4
       ef8 g,16 \change Staff="down" g,16 \change Staff="up" \tuplet 3/2 { a'8 g \change Staff="down" ef \change Staff="up" } df'16 c df \change Staff="down" df, \change Staff="up" |
@@ -485,7 +485,7 @@
       df,8 c''\laissezVibrer s16 s8. s4 s8. \clef "bass" s16 s4 |
       df,,4 s8 s |
       r r bf'16 e, |
-      s4 \clef "treble" fs'16 e df \clef "bass" g, s4 |
+      df,4 \clef "treble" fs''16 e df \clef "bass" g, s4 |
       r8 r c |
       \stemDown c,4 \stemNeutral s2 |
       s2 \clef "treble" s4 |
