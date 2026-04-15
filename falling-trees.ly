@@ -515,8 +515,8 @@
       e16 \change Staff="up" cs'8.\laissezVibrer \change Staff="down" s2. s4 \tuplet 3/2 { s4 \clef "bass" s8 } |
       s1 |
       s1 |
-      s2 \tuplet 3/2 { c,,8 cs c, } |
-      fs,8-> fs'' \tuplet 3/2 { s \clef "treble" s4 } gs\laissezVibrer |
+      s2 \tuplet 3/2 { c,,,8 cs c, } |
+      fs8-> fs'' \tuplet 3/2 { s \clef "treble" s4 } gs\laissezVibrer |
       \clef "bass" r8 a,, \tuplet 3/2 { s \clef "treble" s s } s4 |
       s2. |
       s2. |
@@ -525,8 +525,8 @@
       ds4\laissezVibrer s2 |
       s4 r r |
       R2.*2
-      r2 r4 r8. gs16 |
-      s2 s4 \change Staff="up" b'8. \change Staff="down" gs,,16\laissezVibrer_\markup { \italic "loco" } |
+      r2 r4 r8. gs,16 |
+      s2 s4 \change Staff="up" b''8. \change Staff="down" gs,,16\laissezVibrer_\markup { \italic "loco" } |
       r4 s r \tuplet 3/2 { gs8 a4\fermata } |
 
       % E
