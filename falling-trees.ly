@@ -28,7 +28,7 @@
       bf8. g16 g4 a2 |
       R1
       r2 r4 \ottava 1 g''4 |
-      fs16( g df') \change Staff="down" df, \change Staff="up" \tuplet 6/4 { c' \change Staff="down" df, e df \change Staff="up" bf e, } \tuplet 3/2 { \change Staff="down" c bf' \change Staff="up" c' } c8 \ottava 0 r4 |
+      fs16 g df' \change Staff="down" df, \change Staff="up" \tuplet 6/4 { c' \change Staff="down" df, e df \change Staff="up" bf e, } \tuplet 3/2 { \change Staff="down" c bf' \change Staff="up" c' } c8 \ottava 0 r4 |
 
       \time 3/4 \tweak Y-offset #5.5 \ottava 2 \tweak bracket-visibility ##t \tweak direction #UP \tuplet 6/4 { g'8 bf,16
       \change Staff="down"
