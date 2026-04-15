@@ -443,7 +443,7 @@
       s4 \stemDown \once \override Beam.positions = #'(-3.5 . -5) \tuplet 6/4 { df16\startTextSpan \change Staff="up" g df' \change Staff="down" <bf, gf> e,16 df } \tuplet 3/2 { e8 <c' e,>16 g  bf8\stopTextSpan \stemNeutral } |
       a,8.-> a'16 e4 \clef "bass" |
       \acciaccatura e,,8 <ef c>2-^ r8 c'' |
-      s2 \stemDown \tuplet 6/4 { fs16 e g fs e \change Staff="up" g \change Staff="down" } \stemNeutral s4 |
+      s2 \once \override Beam.positions = #'(-1 . 1) \stemDown \tuplet 6/4 { fs16 e g fs e \change Staff="up" g \change Staff="down" } \stemNeutral s4 |
       R1
       e,1 |
       \clef "treble" df'2 bf'' |
