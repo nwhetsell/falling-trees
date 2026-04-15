@@ -648,7 +648,7 @@
   left-margin = 0.5\in
   top-margin = 0.5\in
   right-margin = 0.5\in
-  bottom-margin = 0.5\in
+  bottom-margin = 0.25\in
   last-bottom-spacing.basic-distance = #(* 0.25 (/ in staff-space))
   last-bottom-spacing.minimum-distance = last-bottom-spacing.basic-distance
 
