@@ -166,7 +166,7 @@
       \time 3/4 \change Staff="down" a,16 gs \change Staff="up" gs'' a \tuplet 3/2 { a,8 fs' e } s4 |
       \tempo \markup { \normal-text { \italic "ritard." } }
       \time 4/4 cs'8 \change Staff="down" a, \change Staff="up" a' \change Staff="down" cs, \tuplet 3/2 { e, gs \change Staff="up" b' } \stemUp \once \override Beam.positions = #'(8 . 7) e16 a, cs ds, |
-      \time 2/4 \once \override Beam.positions = #'(8 . 8) b'16 \change Staff="down" <e, fs,> \change Staff="up" fs' \change Staff="down" ds, \change Staff="up" \once \override Beam.positions = #'(8.5 . 7) gs' e ds \change Staff="down" cs, \change Staff="up" \stemNeutral \revert Beam.positions |
+      \time 2/4 \once \override Beam.positions = #'(8 . 8) b'16 \change Staff="down" <e, fs,> \change Staff="up" fs' \change Staff="down" ds, \change Staff="up" \once \override Beam.positions = #'(8.5 . 7) gs' e ds \change Staff="down" cs, \change Staff="up" \stemNeutral |
       \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 104" } }
       \time 4/4
       \tuplet 7/4 { \change Staff="down" a,16 \change Staff="up" gs''' \change Staff="down" a,, gs \change Staff="up" ds'' a' \change Staff="down" cs,, } \tuplet 3/2 4 { fs,8 \change Staff="up" a' \change Staff="down" ds, \change Staff="up" r8 a'4 gs'8 gs, \change Staff="down" e \change Staff="up" } |
