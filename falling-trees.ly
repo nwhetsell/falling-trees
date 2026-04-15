@@ -92,7 +92,7 @@
       \time 4/4
       \change Staff="down" \tweak bracket-visibility ##t \tweak TupletBracket.padding #2 \tuplet 6/4 { bf16 a8 \change Staff="up" gf''16 df \change Staff="down" bf, \change Staff="up" } bf'' a gf \change Staff="down" g, df \change Staff="up" bf'' e, ef\laissezVibrer s4 |
       c'16 bf8 \change Staff="down" c,16 s4 \tuplet 3/2 { e,8 \change Staff="up" df'' bf } e, \change Staff="down" g,, \change Staff="up" |
-      s4 r r c''16 ef,8. |
+      s4 r r \stemUp c''16 ef,8. \stemNeutral |
       \change Staff="down" ef16 bf \change Staff="up" df' c\laissezVibrer r4 r2 |
       \time 3/4
       r4 \tupletUp \tweak bracket-visibility ##t \tweak TupletBracket.padding #1.9 \tuplet 3/2 { \change Staff="down" c,8 \change Staff="up" df' \change Staff="down" fs, } \tweak bracket-visibility ##t \tweak TupletBracket.padding #0.9 \tuplet 3/2 { \change Staff="up" g' \change Staff="down" g,4\fermata } \tupletNeutral \change Staff="up" | \bar "||"
