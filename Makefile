@@ -1,6 +1,10 @@
 all: falling-trees.pdf
 
-falling-trees.pdf : falling-trees.ly
+dates.ily : info.json
+	echo "#(define copyright-date (car (strptime \"%F\" $$(jq '."copyright date"' info.json))))" > dates.ily
+	echo "#(define revision-date (car (strptime \"%F\" $$(jq '."revision date"' info.json))))" >> dates.ily
+
+falling-trees.pdf : falling-trees.ly dates.ily
 	lilypond falling-trees.ly
 
 single-system.png : falling-trees.ly
@@ -25,5 +29,6 @@ single-system.png : falling-trees.ly
 
 clean :
 	rm -f \
+	dates.ily \
 	falling-trees.pdf \
 	single-system*.png

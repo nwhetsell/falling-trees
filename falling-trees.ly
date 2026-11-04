@@ -1,11 +1,15 @@
 \version "2.25.23"
 
+\include "dates.ily"
+
+\language "english"
+\pointAndClickOff
+
 \header {
   title = "Falling Trees"
   composer = "Nathan Whetsell"
+  tagline = ##f
 }
-
-\language "english"
 
 \score {
   \new PianoStaff <<
@@ -640,8 +644,6 @@
   }
 }
 
-\pointAndClickOff
-
 \paper {
   #(set-paper-size "letter")
 
@@ -673,8 +675,7 @@
           \fromproperty #'header:title
           \abs-fontsize #10
           \line {
-            #(strftime "%B" (localtime (current-time))) #(string-trim (strftime "%e, %Y" (localtime (current-time))))
-            % "October 6, 2025"
+            #(strftime "%B %Y" revision-date)
           }
         }
 
@@ -711,14 +712,10 @@
       \fill-line {
         \if \on-first-page {
           \null
-          "© 2022–2026 Nathan Whetsell. All rights reserved."
+          \line { "©" #(strftime "%Y" copyright-date) "Nathan Whetsell. All rights reserved." }
           \null
         }
       }
     }
   }
-}
-
-\header {
-  tagline = ##f
 }
