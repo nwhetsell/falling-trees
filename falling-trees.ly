@@ -23,10 +23,10 @@
         \normal-text \concat { "(" \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 112)" }
       }
       \time 4/4
-      \ottava #1 c''''8^"With lots of pedal" \tuplet 3/2 { df16 bf df } ef8. \set subdivideBeams = ##t bf16 16 g \tuplet 3/2 { e' a, g } \unset subdivideBeams e'8. df,16 |
+      \ottava 1 c''''8^"With lots of pedal" \tuplet 3/2 { df16 bf df } ef8. \set subdivideBeams = ##t bf16 16 g \tuplet 3/2 { e' a, g } \unset subdivideBeams e'8. df,16 |
       \tuplet 6/4 4 { df'16 bf fs c ef a, df fs g ef g a bf, df g bf, df fs bf, e bf g a ef' } |
       \time 3/4 \tuplet 6/4 { ef,16 fs' bf, ef, df' ef } \stemDown \tuplet 6/4 { \crossStaff { ef16 } s16*3 \crossStaff { e16 } s } \tuplet 3/2 { \crossStaff { <e e,>8 } s \crossStaff { <ef gf,> } } \stemNeutral |
-      \time 2/4 <df bf>4-> \ottava #0 \set subdivideBeams = ##t ef,16 bf' ef,32 e g a \unset subdivideBeams |
+      \time 2/4 <df bf>4-> \ottava 0 \set subdivideBeams = ##t ef,16 bf' ef,32 e g a \unset subdivideBeams |
       \time 3/4 \grace s8 <bf bf,>4-^ ef, \acciaccatura g8 ef8 a |
       \time 4/4 g16 ef \change Staff="down" g,,8 \change Staff="up" c'16 bf df \change Staff="down" e, \change Staff="up" \once \override TupletNumber.stencil = ##f \tuplet 6/4 { s8. \crossStaff { df'16 } s8 } \change Staff="down" e,,8[ \change Staff="up" c''] |
       bf8. g16 g4 a2 |
@@ -34,13 +34,13 @@
       r2 r4 \ottava 1 g''4 |
       fs16 g df' \change Staff="down" df, \change Staff="up" \tuplet 6/4 { c' \change Staff="down" df, e df \change Staff="up" bf e, } \tuplet 3/2 { \change Staff="down" c bf' \change Staff="up" c' } c8 \ottava 0 r4 |
 
-      \time 3/4 \tweak Y-offset #5.5 \ottava 2 \tweak bracket-visibility ##t \tweak direction #UP \tuplet 6/4 { g'8 bf,16
+      \time 3/4 \tweak Y-offset 5.5 \ottava 2 \tweak bracket-visibility ##t \tweak direction #UP \tuplet 6/4 { g'8 bf,16
       \change Staff="down"
       % Position “loco” markup inside the staff, based on
       % https://lists.gnu.org/archive/html/lilypond-user/2018-02/msg00453.html
       \once \override TextScript.outside-staff-priority = ##f
-      \once \override TextScript.X-offset = #2
-      \once \override TextScript.Y-offset = #3
+      \once \override TextScript.X-offset = 2
+      \once \override TextScript.Y-offset = 3
       c,8_\markup { \italic "loco" }
       \change Staff="up" fs'16 } \tweak bracket-visibility ##t \tweak direction #UP \tuplet 3/2 { df8 bf16 } c8\laissezVibrer \ottava 0 r4 |
 
@@ -75,7 +75,7 @@
       \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 104" } }
       \time 4/4
       \ottava 2 c''8 bf \stemDown \change Staff="down" g,16 \change Staff="up" e'32 \change Staff="down" bf32 g8\laissezVibrer \change Staff="up" r8 \tuplet 3/2 { a'16 \change Staff="down" bf, g \change Staff="up" } \stemNeutral e' ef8. |
-      g16 ef df8\laissezVibrer r[ e16 \change Staff="down" a,] \change Staff="up" \ottava #0 s2 |
+      g16 ef df8\laissezVibrer r[ e16 \change Staff="down" a,] \change Staff="up" \ottava 0 s2 |
       \time 5/4
       \tuplet 3/2 { bf8 df, bf\laissezVibrer } r4 df16 c bf a c a fs \change Staff="down" bf, \change Staff="up" e' df a8 |
       \tuplet 6/4 4 {
@@ -94,12 +94,12 @@
       ef8 g,16 \change Staff="down" g,16 \change Staff="up" \tuplet 3/2 { a'8 g \change Staff="down" ef \change Staff="up" } df'16 c df \change Staff="down" df, \change Staff="up" |
       \change Staff="down" c,16 \change Staff="up" e'' bf df c8[ \tuplet 3/2 { r16 df e] } \tuplet 3/2 { \change Staff="down" fs, \change Staff="up" bf g' } \change Staff="down" g,,8 \change Staff="up" |
       \time 4/4
-      \change Staff="down" \tweak bracket-visibility ##t \tweak TupletBracket.padding #2 \tuplet 6/4 { bf16 a8 \change Staff="up" gf''16 df \change Staff="down" bf, \change Staff="up" } bf'' a gf \change Staff="down" g, df \change Staff="up" bf'' e, ef\laissezVibrer s4 |
+      \change Staff="down" \tweak bracket-visibility ##t \tweak TupletBracket.padding 2 \tuplet 6/4 { bf16 a8 \change Staff="up" gf''16 df \change Staff="down" bf, \change Staff="up" } bf'' a gf \change Staff="down" g, df \change Staff="up" bf'' e, ef\laissezVibrer s4 |
       c'16 bf8 \change Staff="down" c,16 s4 \tuplet 3/2 { e,8 \change Staff="up" df'' bf } e, \change Staff="down" g,, \change Staff="up" |
       s4 r r \stemUp c''16 ef,8. \stemNeutral |
       \change Staff="down" ef16 bf \change Staff="up" df' c\laissezVibrer r4 r2 |
       \time 3/4
-      r4 \tupletUp \tweak bracket-visibility ##t \tweak TupletBracket.padding #1.9 \tuplet 3/2 { \change Staff="down" c,8 \change Staff="up" df' \change Staff="down" fs, } \tweak bracket-visibility ##t \tweak TupletBracket.padding #0.9 \tuplet 3/2 { \change Staff="up" g' \change Staff="down" g,4\fermata } \tupletNeutral \change Staff="up" | \bar "||"
+      r4 \tupletUp \tweak bracket-visibility ##t \tweak TupletBracket.padding 1.9 \tuplet 3/2 { \change Staff="down" c,8 \change Staff="up" df' \change Staff="down" fs, } \tweak bracket-visibility ##t \tweak TupletBracket.padding 0.9 \tuplet 3/2 { \change Staff="up" g' \change Staff="down" g,4\fermata } \tupletNeutral \change Staff="up" | \bar "||"
 
       % C
       \mark \default
@@ -134,7 +134,7 @@
       \tuplet 6/4 4 { e16 \change Staff="up" a' gs \change Staff="down" ds, cs' c \change Staff="up" cs' gs e e'16 ds \change Staff="down" fs, } fs, \change Staff="up" c'' cs, \change Staff="down" cs, ds \change Staff="up" c' \change Staff="down" a,8 \change Staff="up" |
       \time 3/4
       ds''16 cs gs \change Staff="down" e, \change Staff="up" \tuplet 3/2 { a'8 e \change Staff="down" ds, \change Staff="up" } s4 |
-      <ds''! c cs,!>4->^\markup { \italic "accel." } \tuplet 3/2 { \tweak Y-offset #6 \ottava 2 a'''8-^ \ottava 0 \change Staff="down" a,, gs \change Staff="up" } s4 |
+      <ds''! c cs,!>4->^\markup { \italic "accel." } \tuplet 3/2 { \tweak Y-offset 6 \ottava 2 a'''8-^ \ottava 0 \change Staff="down" a,, gs \change Staff="up" } s4 |
       r4 \tuplet 3/2 { a,8 e \change Staff="down" cs \change Staff="up" } cs'16 \change Staff="down" a \change Staff="up" e' \change Staff="down" ds, \change Staff="up" |
       \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 144" } }
       \tuplet 3/2 4 { ds'8 \change Staff="down" a fs \change Staff="up" cs' \change Staff="down" a c, \change Staff="up" } gs''16 cs, a' e |
@@ -146,7 +146,7 @@
       gs16 cs, \change Staff="down" e,16 a, gs e' \change Staff="up" gs \change Staff="down" c,\laissezVibrer \change Staff="up" r8[ a'16 gs] \change Staff="down" a,8 \change Staff="up" gs''16 gs, |
       \time 3/4
       \tempo \markup { \normal-text { \italic "molto ritard." } }
-      r4 \ottava 1 \tuplet 3/2 { gs'8 c a } \tupletUp \tweak TupletBracket.padding #2 \tuplet 3/2 { c,8 \ottava 0 \change Staff="down" ds,4 \change Staff="up" } \tupletNeutral |
+      r4 \ottava 1 \tuplet 3/2 { gs'8 c a } \tupletUp \tweak TupletBracket.padding 2 \tuplet 3/2 { c,8 \ottava 0 \change Staff="down" ds,4 \change Staff="up" } \tupletNeutral |
       \ottava 1 a''16 \ottava 0 \change Staff="down" gs, gs,8\laissezVibrer \change Staff="up" r4 r |
       \tempo \markup { \normal-text \concat { \smaller { \general-align #Y #DOWN \note {4} #0.75 } " = c. 72" } }
       \ottava 1 a''16 a,8. a'16 b,8.\laissezVibrer r4 |
@@ -312,11 +312,11 @@
       s2.
       s2 \f \<
       s2. \ff \>
-      s4 \tweak X-offset #-3.5 \mf s2. \tweak Y-offset #-1 \dim
+      s4 \tweak X-offset -3.5 \mf s2. \tweak Y-offset -1 \dim
       s1 \p \>
       s1 \pp
       s1*2 \cresc
-      s2 \tweak X-offset #-2 \tweak Y-offset #-2 \mf s4 \dim
+      s2 \tweak X-offset -2 \tweak Y-offset -2 \mf s4 \dim
       s2
       s1*2 \pp
 
@@ -340,18 +340,18 @@
       s4. \dim
       s2.*2
       s1
-      s1*3 \tweak Y-offset #-6.2 \pp
+      s1*3 \tweak Y-offset -6.2 \pp
       s2.
 
       % C
       s2. \pp
       s1
-      s2.*3 \tweak Y-offset #-6 \cresc
+      s2.*3 \tweak Y-offset -6 \cresc
       s2 s \ff
       s1
-      s1*2 \tweak Y-offset #-4 \dim
+      s1*2 \tweak Y-offset -4 \dim
       s1*5/4
-      s1 \tweak Y-offset #-2 \pp
+      s1 \tweak Y-offset -2 \pp
 
       % D
       s1 \pp
@@ -385,7 +385,7 @@
       s2 s \mf
       s2
       s2.
-      s2. \tweak Y-offset #2 \dim
+      s2. \tweak Y-offset 2 \dim
       s1*5/4*2
       s1*7 \pp
 
@@ -405,7 +405,7 @@
       s1
       s2.
       s4 \f s2. \cresc
-      s1 \tweak Y-offset #-4 \ff
+      s1 \tweak Y-offset -4 \ff
       s2. \dim
       s1*5/4
       s1*4 \pp
@@ -436,13 +436,13 @@
 
       r4 ef'2. |
       r8 df' c4\laissezVibrer \tuplet 3/2 { r8[ e, a] } e'4\laissezVibrer |
-      \override TextSpanner.dash-period = #1
-      \override TextSpanner.dash-fraction = #0.3
-      \override TextSpanner.bound-details.left.padding = #-4.1
+      \override TextSpanner.dash-period = 1
+      \override TextSpanner.dash-fraction = 0.3
+      \override TextSpanner.bound-details.left.padding = -4.1
       \override TextSpanner.bound-details.left.text = \markup { \italic { "loco " } }
       \override TextSpanner.bound-details.right.text = \markup { \draw-line #'(0 . -0.8) }
-      \override TextSpanner.bound-details.right-broken.padding = #0
-      \override TextSpanner.bound-details.right.padding = #-1
+      \override TextSpanner.bound-details.right-broken.padding = 0
+      \override TextSpanner.bound-details.right.padding = -1
       \override TextSpanner.bound-details.right-broken.text = ""
       s4 \stemDown \once \override Beam.positions = #'(-3.5 . -5) \tuplet 6/4 { df16\startTextSpan \change Staff="up" g df' \change Staff="down" <bf, gf> e,16 df } \tuplet 3/2 { e8 <c' e,>16 g  bf8\stopTextSpan \stemNeutral } |
       a,8.-> a'16 e4 \clef "bass" |
@@ -459,8 +459,8 @@
       R1\fermata
 
       % A
-      \ottava #1 <c' bf g fs>4-> r8 <a e bf> fs4-> |
-      df,4-> r8 <e' c>-> <ef df>4 \ottava #0 |
+      \ottava 1 <c' bf g fs>4-> r8 <a e bf> fs4-> |
+      df,4-> r8 <e' c>-> <ef df>4 \ottava 0 |
       <<
         {
           <g, fs df bf>2-> <e df>4 bf\laissezVibrer |
@@ -473,8 +473,8 @@
         }
       >> r8 <df df,>16 |
       <bf' g e>4 <a ef bf>8. <df, g,>16\laissezVibrer \clef "bass" r8 <ef df,>4. |
-      fs,2. \ottava #-1 <df df,>4 |
-      <c a,>8.\arpeggio\laissezVibrer[ \ottava #0 r8. g'8\laissezVibrer] r2 |
+      fs,2. \ottava -1 <df df,>4 |
+      <c a,>8.\arpeggio\laissezVibrer[ \ottava 0 r8. g'8\laissezVibrer] r2 |
       r8 e8 bf' fs'8 g,8 bf |
       \clef "treble" <g' df>8. <e' df>8. a,8. c8. ef4\laissezVibrer |
       R1*2
@@ -482,8 +482,8 @@
       r4 s r |
 
       % B
-      s4 \ottava #1 s2. |
-      s2 g''16 bf e, a ef4 \ottava #0 |
+      s4 \ottava 1 s2. |
+      s2 g''16 bf e, a ef4 \ottava 0 |
       s2. s4 g,, |
       s4 \stemDown gf, bf \stemNeutral s2 |
       df,8 c''\laissezVibrer s16 s8. s4 s8. \clef "bass" s16 s4 |
@@ -630,7 +630,7 @@
     \context {
       \Score
       rehearsalMarkFormatter = #format-mark-box-alphabet
-      \override Stem.stemlet-length = #1
+      \override Stem.stemlet-length = 1
       \override TupletBracket.bracket-visibility = #'if-no-beam
       \override TupletBracket.span-all-note-heads = ##t
     }
